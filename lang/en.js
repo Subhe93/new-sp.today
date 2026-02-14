@@ -11,6 +11,7 @@ export default {
   "Sell Price": "Sell",
   "Buy Price": "Buy",
   "Exchage Rate": "Change %",
+  currency_new: "(new)",
   Saturday: "Saturday",
   Sunday: "Sunday",
   Monday: "Monday",
@@ -71,6 +72,7 @@ export default {
     gold_col_last_update: "Last Updated",
     gold_col_buy_price: "Buy",
     gold_col_sell_price: "Sell",
+    gold_ounce_usd_note: "Ounce price in USD",
     sitemap_title: "SP Today Archive - Historical Rates",
     sitemap_subtitle:
       "Browse the archive of exchange rates and gold prices for previous days and months.",

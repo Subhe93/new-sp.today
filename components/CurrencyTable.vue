@@ -103,8 +103,12 @@
                         item.city.slug
                       : '/currency/' + item.dest_currency.seo_name
                   "
-                  >{{ item.sell_price }}</nuxt-link
                 >
+                  {{ item.sell_price }}
+                  <div class="text-caption mt-0 pt-0" style="font-weight: 400; opacity: 0.9">
+                    {{ $t("currency_new") }} {{ newPrice(item.sell_price) }}
+                  </div>
+                </nuxt-link>
               </td>
               <td>
                 <nuxt-link
@@ -119,8 +123,12 @@
                         item.city.slug
                       : '/currency/' + item.dest_currency.seo_name
                   "
-                  >{{ item.buy_price }}</nuxt-link
                 >
+                  {{ item.buy_price }}
+                  <div class="text-caption mt-0 pt-0" style="font-weight: 400; opacity: 0.9">
+                    {{ $t("currency_new") }} {{ newPrice(item.buy_price) }}
+                  </div>
+                </nuxt-link>
               </td>
               <td
                 ref="tdHide"
@@ -174,6 +182,12 @@ export default {
     },
   },
   methods: {
+    newPrice(price) {
+      const num = Number(price);
+      if (!Number.isFinite(num)) return "–";
+      const val = num / 100;
+      return val % 1 === 0 ? val.toLocaleString() : val.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 2 });
+    },
     // async exportToPng() {
     //   const html2canvas = (await import("html2canvas")).default;
     //   const node = this.$refs.myDiv;

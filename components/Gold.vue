@@ -10,7 +10,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="item in $store.state.home.gold" :key="item.id">
+          <tr v-for="(item, idx) in $store.state.home.gold" :key="item.id">
             <td>
               {{ item.translations[0].title }}
             </td>
@@ -30,9 +30,15 @@
                 :class="item.change === 0 ? 'color_none' : ''"
                 >mdi-min</v-icon
               >
+              <div v-if="!isLastRow(idx) && item.price" class="gold-new-price">
+                {{ $t('currency_new') }} {{ newPrice(item.price) }}
+              </div>
+              <div v-else-if="isLastRow(idx)" class="gold-ounce-note">
+                {{ $t('meta.gold_ounce_usd_note') }}
+              </div>
             </td>
             <td>
-              {{ item.currency_translations[0].symbol }}
+              {{ isLastRow(idx) ? 'USD' : item.currency_translations[0].symbol }}
             </td>
           </tr>
         </tbody>
@@ -42,8 +48,18 @@
 </template>
 <script>
 export default {
-  name: "CurrencyTable",
-  methods: {},
+  name: "GoldTable",
+  methods: {
+    isLastRow(idx) {
+      return idx === this.$store.state.home.gold.length - 1;
+    },
+    newPrice(price) {
+      const num = Number(price);
+      if (!Number.isFinite(num)) return "–";
+      const val = num / 100;
+      return val % 1 === 0 ? val.toLocaleString() : val.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 2 });
+    },
+  },
 };
 </script>
 <style scoped>
@@ -64,6 +80,20 @@ export default {
   font-size: 16px !important;
   color: #0c332e !important;
   /* color: #0c332e !important; */
+}
+.gold-new-price {
+  font-size: 12px;
+  font-weight: 500;
+  color: #0c332e;
+  opacity: 0.88;
+  margin-top: 2px;
+}
+.gold-ounce-note {
+  font-size: 11px;
+  font-weight: 500;
+  color: #0c332e;
+  opacity: 0.75;
+  margin-top: 2px;
 }
 .elevationCu {
   border: 1px solid #99a0ab;

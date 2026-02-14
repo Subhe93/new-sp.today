@@ -70,6 +70,7 @@
             <v-text-field
               solo
               dense
+              type="text"
               background-color="secondary"
               class="primary--text width_auto shadow-0 w-100 centered-input"
               v-model="to"
@@ -78,7 +79,18 @@
               @blur="restorePlaceholder('to')"
               @input="convertTo()"
             ></v-text-field>
+
           </v-col>
+          <v-row class="pa-0 ma-0">
+            <v-col cols="12" class="text-center  ma-0 pt-0">
+              <div v-if="toNewFormatted" class="converter-new-price mt-2">
+
+                <span class="converter-new-price__value">{{ toNewFormatted }}</span>
+                <span class="converter-new-price__unit">{{ main_text }}</span>
+                <span class="converter-new-price__badge">{{ $t("currency_new") }}</span>
+              </div>
+            </v-col>
+          </v-row>
         </v-row>
       </v-col>
     </v-row>
@@ -109,6 +121,12 @@ export default {
       all: (state) => state.home.all,
       currency_prices: (state) => state.currency_prices.all,
     }),
+    toNewFormatted() {
+      const num = parseFloat(this.to);
+      if (!Number.isFinite(num) || num === 0) return "";
+      const val = num / 100;
+      return val % 1 === 0 ? String(val) : val.toFixed(2);
+    },
   },
 
   methods: {
@@ -189,5 +207,35 @@ export default {
 }
 .custom_padding {
   padding: 0px 15px !important;
+}
+
+.converter-new-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding: 8px 12px;
+  background: linear-gradient(135deg, rgba(12, 51, 46, 0.08) 0%, rgba(12, 51, 46, 0.04) 100%);
+  border-radius: 10px;
+  border: 1px solid rgba(12, 51, 46, 0.15);
+}
+.converter-new-price__badge {
+  font-size: 11px;
+  font-weight: 600;
+  color: #0c332e;
+  opacity: 0.85;
+  letter-spacing: 0.02em;
+}
+.converter-new-price__value {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0c332e;
+  font-variant-numeric: tabular-nums;
+}
+.converter-new-price__unit {
+  font-size: 11px;
+  color: #0c332e;
+  opacity: 0.7;
 }
 </style>

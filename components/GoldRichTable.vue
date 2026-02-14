@@ -33,12 +33,24 @@
               <span class="text-caption">
                 {{ idx === $store.state.home.gold.length - 1 ? 'USD' : item.currency_translations[0].symbol }}
               </span>
+              <div v-if="!isLastRow(idx) && item.buy_price" class="gold-new-price">
+                {{ $t('currency_new') }} {{ newPrice(item.buy_price) }}
+              </div>
+              <div v-else-if="isLastRow(idx)" class="gold-ounce-note">
+                {{ $t('meta.gold_ounce_usd_note') }}
+              </div>
             </td>
             <td class="text-center price-cell">
               {{ item.sell_price ? Number(item.sell_price).toLocaleString() : '-' }}
               <span class="text-caption">
                 {{ idx === $store.state.home.gold.length - 1 ? 'USD' : item.currency_translations[0].symbol }}
               </span>
+              <div v-if="!isLastRow(idx) && item.sell_price" class="gold-new-price">
+                {{ $t('currency_new') }} {{ newPrice(item.sell_price) }}
+              </div>
+              <div v-else-if="isLastRow(idx)" class="gold-ounce-note">
+                {{ $t('meta.gold_ounce_usd_note') }}
+              </div>
             </td>
           </tr>
         </tbody>
@@ -49,6 +61,17 @@
 <script>
 export default {
   name: "GoldRichTable",
+  methods: {
+    isLastRow(idx) {
+      return idx === this.$store.state.home.gold.length - 1;
+    },
+    newPrice(price) {
+      const num = Number(price);
+      if (!Number.isFinite(num)) return "–";
+      const val = num / 100;
+      return val % 1 === 0 ? val.toLocaleString() : val.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 2 });
+    },
+  },
 };
 </script>
 <style scoped>
@@ -96,6 +119,20 @@ export default {
 .elevationCu {
   border: 1px solid #99a0ab;
   border-radius: 10px !important;
+}
+.gold-new-price {
+  font-size: 12px;
+  font-weight: 500;
+  color: #0c332e;
+  opacity: 0.88;
+  margin-top: 2px;
+}
+.gold-ounce-note {
+  font-size: 11px;
+  font-weight: 500;
+  color: #0c332e;
+  opacity: 0.75;
+  margin-top: 2px;
 }
 table > thead > tr:last-child > th {
   border-bottom: 1px solid #99a0ab !important;

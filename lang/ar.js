@@ -11,6 +11,7 @@ export default {
   "Sell Price": "مبيع",
   "Buy Price": "شراء",
   "Exchage Rate": "نسبة التغير",
+  currency_new: "(جديد)",
   Saturday: "السبت",
   Sunday: "الأحد",
   Monday: "الاثنين",
@@ -71,6 +72,7 @@ export default {
     gold_col_last_update: "وقت التحديث",
     gold_col_buy_price: "شراء",
     gold_col_sell_price: "مبيع",
+    gold_ounce_usd_note: "سعر الأونصة بالدولار",
     sitemap_title: "أرشيف الليرة اليوم - سجل الأسعار التاريخي",
     sitemap_subtitle:
       "استعرض أرشيف أسعار الصرف والذهب للأيام والأشهر السابقة.",

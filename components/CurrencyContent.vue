@@ -16,7 +16,12 @@
       <tbody>
         <tr v-for="amount in amounts" :key="amount">
           <td>{{ formatNumber(amount) }} {{ currencyName }}</td>
-          <td>{{ formatNumber(amount * rate) }} {{ $t("currency_table.syp_only") }}</td>
+          <td>
+            {{ formatNumber(amount * rate) }} {{ $t("currency_table.syp_only") }}
+            <div class="text-caption mt-0 pt-0" style="opacity: 0.9">
+              {{ $t("currency_new") }} {{ formatNumber((amount * rate) / 100) }}
+            </div>
+          </td>
         </tr>
       </tbody>
     </table>
