@@ -24,7 +24,7 @@
         <div class="w-100">
           <div
             class="mb-2 w-100"
-            style="height: 4px; width: 60px; background-color: #0c332e"
+            style="height: 4px; width: 60px; background-color: #1c4c8c"
           ></div>
         </div>
         <p class="text-body-1 mb-6 mt-2 w-100">
@@ -50,7 +50,7 @@
               background: #1a1a2c;
               color: white;
               border-radius: 12px;
-              background: #0c332e;
+              background: #1c4c8c;
             "
           >
             <div class="text-caption">
@@ -66,7 +66,7 @@
             style="
               bottom: 15%;
               left: 10%;
-              background: #0c332e;
+              background: #1c4c8c;
               color: white;
               border-radius: 12px;
             "

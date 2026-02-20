@@ -10,11 +10,11 @@
           <nuxt-link class="d-flex flex-row align-center flex-no-wrap" to="/">
             <v-img
               class="header-logo"
-              width="70px"
+              width="180px"
               alt="Lirtna Logo"
-              src="/lirtna-logo.png"
+              src="/sp-today-logo-and-name-white.png"
             />
-            <div class="white--text text-h2 mr-2">{{ $t("Lirtna") }}</div>
+            <!-- <div class="white--text text-h2 mr-2">{{ $t("Lirtna") }}</div> -->
           </nuxt-link>
         </div>
 

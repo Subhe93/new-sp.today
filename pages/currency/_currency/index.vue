@@ -368,6 +368,6 @@ export default {
   }
 }
 .color-black {
-  color: #0c332e;
+  color: #1c4c8c;
 }
 </style>

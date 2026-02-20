@@ -84,7 +84,7 @@ th,
 td {
   padding: 12px 0;
   text-align: start;
-  color: #0c332e;
+  color: #1c4c8c;
 }
 
 th {

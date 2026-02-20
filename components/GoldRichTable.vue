@@ -103,11 +103,11 @@ export default {
 .type-cell {
   font-size: 16px;
   font-weight: 500;
-  color: #0c332e;
+  color: #1c4c8c;
 }
 .price-cell {
   font-weight: bold;
-  color: #0c332e;
+  color: #1c4c8c;
   font-size: 17px;
 }
 .tableCurrency tbody tr:nth-child(odd) {
@@ -123,14 +123,14 @@ export default {
 .gold-new-price {
   font-size: 12px;
   font-weight: 500;
-  color: #0c332e;
+  color: #1c4c8c;
   opacity: 0.88;
   margin-top: 2px;
 }
 .gold-ounce-note {
   font-size: 11px;
   font-weight: 500;
-  color: #0c332e;
+  color: #1c4c8c;
   opacity: 0.75;
   margin-top: 2px;
 }
@@ -146,4 +146,4 @@ table > tbody > tr:not(:last-child) > td:not(.v-data-table__mobile-row),
   > th:not(.v-data-table__mobile-row) {
   border-bottom: thin solid rgba(0, 0, 0, 0) !important;
 }
-</style> 
+</style>

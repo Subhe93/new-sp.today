@@ -10,7 +10,7 @@
       style="
         font-family: 'Tajawal', sans-serif !important;
         border-radius: 10px;
-        background: #0c332e;
+        background: #1c4c8c;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -298,7 +298,7 @@ export default {
   padding: 10px;
 }
 .text-pri {
-  color: #0c332e !important;
+  color: #1c4c8c !important;
 }
 .color_red {
   color: #af1804;
@@ -312,8 +312,8 @@ export default {
 .tableCurrency tr th {
   font-weight: 500 !important;
   font-size: 16px !important;
-  color: #0c332e !important;
-  /* color: #0c332e !important; */
+  color: #1c4c8c !important;
+  /* color: #1c4c8c !important; */
 }
 .elevationCu {
   border: 1px solid #99a0ab;
@@ -345,7 +345,7 @@ table > tbody > tr:not(:last-child) > td:not(.v-data-table__mobile-row),
   border-bottom: thin solid rgba(0, 0, 0, 0.4) !important;
 }
 table > tbody tr:nth-child(odd) {
-  background-color: #0c332e09;
+  background-color: #1c4c8c09;
 }
 @media (max-width: 991px) {
   .v-data-table > .v-data-table__wrapper > table > tbody > tr > td,

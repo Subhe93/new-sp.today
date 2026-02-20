@@ -89,7 +89,7 @@ export default {
 }
 @media (max-width: 991px) {
   .header-logo {
-    width: 40px !important;
+    width: 125px !important;
   }
 }
 </style>

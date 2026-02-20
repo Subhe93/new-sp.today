@@ -78,20 +78,20 @@ export default {
 .tableCurrency tr th {
   font-weight: 500 !important;
   font-size: 16px !important;
-  color: #0c332e !important;
-  /* color: #0c332e !important; */
+  color: #1c4c8c !important;
+  /* color: #1c4c8c !important; */
 }
 .gold-new-price {
   font-size: 12px;
   font-weight: 500;
-  color: #0c332e;
+  color: #1c4c8c;
   opacity: 0.88;
   margin-top: 2px;
 }
 .gold-ounce-note {
   font-size: 11px;
   font-weight: 500;
-  color: #0c332e;
+  color: #1c4c8c;
   opacity: 0.75;
   margin-top: 2px;
 }

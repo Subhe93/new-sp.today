@@ -48,13 +48,13 @@
     .currency-table th {
       font-weight: 500;
       font-size: 16px;
-      color: #0c332e;
+      color: #1c4c8c;
       text-align: start;
       padding: 8px;
       border-bottom: 1px solid #ccc;
     }
     .currency-table tr:nth-child(odd) {
-      background-color: #0c332e09;
+      background-color: #1c4c8c09;
     }
       .currency-table th {
       background-color: #fff;

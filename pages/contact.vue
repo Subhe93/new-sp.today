@@ -31,12 +31,12 @@
         >
           <div
             class="d-flex align-center mb-4 rounded-lg pa-3"
-            :style="{ backgroundColor: '#0c332e14' }"
+            :style="{ backgroundColor: '#1c4c8c14' }"
           >
             <div
               class="pa-2 me-4 rounded-lg"
               :class="isArabic ? 'ms-4' : 'me-4'"
-              :style="{ backgroundColor: '#0c332e29' }"
+              :style="{ backgroundColor: '#1c4c8c29' }"
             >
               <v-icon class="" color="green1">mdi-email</v-icon>
             </div>
@@ -51,12 +51,12 @@
         <a href="tel:+46701234567" target="_blank" class="me-4">
           <div
             class="d-flex align-center w-100 mb-4 rounded-lg pa-3"
-            :style="{ backgroundColor: '#0c332e14' }"
+            :style="{ backgroundColor: '#1c4c8c14' }"
           >
             <div
               class="pa-2 me-4 rounded-lg"
               :class="isArabic ? 'ms-4' : 'me-4'"
-              :style="{ backgroundColor: '#0c332e29' }"
+              :style="{ backgroundColor: '#1c4c8c29' }"
             >
               <v-icon class="" color="green1">mdi-phone</v-icon>
             </div>
@@ -81,7 +81,7 @@
               href="https://facebook.com"
               target="_blank"
               class="me-4 pa-3 rounded-lg a"
-              :style="{ backgroundColor: '#0c332e29' }"
+              :style="{ backgroundColor: '#1c4c8c29' }"
             >
               <v-icon color="green1">mdi-facebook</v-icon>
             </a>
@@ -89,7 +89,7 @@
               href="https://twitter.com"
               target="_blank"
               class="me-4 pa-3 rounded-lg a"
-              :style="{ backgroundColor: '#0c332e29' }"
+              :style="{ backgroundColor: '#1c4c8c29' }"
             >
               <v-icon color="green1">mdi-twitter</v-icon>
             </a>
@@ -97,7 +97,7 @@
               href="https://instagram.com"
               target="_blank"
               class="me-4 pa-3 rounded-lg a"
-              :style="{ backgroundColor: '#0c332e29' }"
+              :style="{ backgroundColor: '#1c4c8c29' }"
             >
               <v-icon color="green1">mdi-instagram</v-icon>
             </a>
@@ -105,7 +105,7 @@
               href="https://wa.me/1234567890"
               target="_blank"
               class="me-4 pa-3 rounded-lg a"
-              :style="{ backgroundColor: '#0c332e29' }"
+              :style="{ backgroundColor: '#1c4c8c29' }"
             >
               <v-icon color="green1">mdi-whatsapp</v-icon>
             </a>

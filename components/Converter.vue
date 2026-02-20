@@ -189,7 +189,7 @@ export default {
   border-bottom: 1px solid #99a0ab !important;
   height: 48px;
   padding: 12px 16px;
-  color: #0c332e;
+  color: #1c4c8c;
   font-weight: 500;
 }
 .mnue-height {
@@ -223,19 +223,19 @@ export default {
 .converter-new-price__badge {
   font-size: 11px;
   font-weight: 600;
-  color: #0c332e;
+  color: #1c4c8c;
   opacity: 0.85;
   letter-spacing: 0.02em;
 }
 .converter-new-price__value {
   font-size: 15px;
   font-weight: 700;
-  color: #0c332e;
+  color: #1c4c8c;
   font-variant-numeric: tabular-nums;
 }
 .converter-new-price__unit {
   font-size: 11px;
-  color: #0c332e;
+  color: #1c4c8c;
   opacity: 0.7;
 }
 </style>
